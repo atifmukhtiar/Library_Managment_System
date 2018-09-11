@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class Controller {
+public class LoginController {
 
 	@FXML
 	private Label titleLabel;
@@ -18,4 +18,5 @@ public class Controller {
 	public void submit(ActionEvent actionEvent){
 		titleLabel.setText("Login Button Pressed");
 	}
+	
 }

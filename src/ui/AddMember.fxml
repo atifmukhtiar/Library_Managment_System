@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="498.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AddMemberController">
+   <children>
+      <TextField layoutX="96.0" layoutY="70.0" promptText="ID" />
+      <TextField layoutX="96.0" layoutY="110.0" promptText="First Name" />
+      <TextField layoutX="96.0" layoutY="152.0" promptText="Last Name" />
+      <TextField layoutX="96.0" layoutY="193.0" promptText="Street" />
+      <TextField layoutX="96.0" layoutY="234.0" promptText="City" />
+      <TextField layoutX="96.0" layoutY="274.0" promptText="State" />
+      <TextField layoutX="96.0" layoutY="312.0" promptText="Zip" />
+      <TextField layoutX="96.0" layoutY="354.0" promptText="Telephone Number" />
+      <Label fx:id="labelRegisterMember" layoutX="96.0" layoutY="26.0" text="Register Member" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegister" layoutX="358.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnRegister" text="Register" />
+   </children>
+</AnchorPane>
