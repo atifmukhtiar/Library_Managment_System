@@ -2,6 +2,7 @@ package ui.member;
 
 import business.Address;
 import business.Member;
+import dataaccess.DataStorage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,6 +29,10 @@ public class MemberController {
 	Member member = new Member();
 	Address address = new Address();
 	
+	
+	DataStorage memSerialization = new DataStorage();
+	
+	
 	@FXML
 	private Button btnSubmit;
 	public void btnSubmit(ActionEvent actionEvent) {
@@ -43,6 +48,8 @@ public class MemberController {
 		member.setAddress(address);
 		
 		
+		memSerialization.saveMember(member);
+		memSerialization.getMember();
 		
 	}
 }

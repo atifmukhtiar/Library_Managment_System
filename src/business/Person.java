@@ -1,6 +1,13 @@
 package business;
 
-public abstract class Person {
+import java.io.Serializable;
+
+public abstract class Person implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private String firstName;
 	private String lastName;
 	private String phoneNumber;
