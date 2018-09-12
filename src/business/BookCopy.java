@@ -1,12 +1,12 @@
 package business;
 
 public class BookCopy {
-	private int copyNumber=0;
+	public int copyNumber;
 	private Book book;
 	
-	public BookCopy(Book book) {
+	public BookCopy(Book book,int copyNumber) {
 		this.book=book;
-		++this.copyNumber;
+		this.copyNumber=copyNumber;
 	}
 	
 
@@ -24,6 +24,11 @@ public class BookCopy {
 
 	public void setBook(Book book) {
 		this.book = book;
+	}
+	
+	@Override
+	public String toString() {
+		return "Copy "+copyNumber+" of "+book.getTitle();
 	}
 	
 	

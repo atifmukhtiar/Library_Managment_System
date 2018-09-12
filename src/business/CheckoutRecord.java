@@ -3,18 +3,19 @@ import java.util.*;
 
 public class CheckoutRecord {
 	Member member;
-	List<CheckoutEntry> checkoutentries;
-	List<Fine> fines;
+	LinkedList<CheckoutEntry> checkoutentries;
+	LinkedList<Fine> fines;
 	
 	public CheckoutRecord(Member member) {
 		this.member=member;
+		checkoutentries=new LinkedList<>();
 		}
 
 	public Member getMember() {
 		return member;
 	}
 
-	public List<CheckoutEntry> getCheckoutentries() {
+	public LinkedList<CheckoutEntry> getCheckoutentries() {
 		return checkoutentries;
 	}
 
@@ -22,7 +23,7 @@ public class CheckoutRecord {
 		this.checkoutentries.add(checkoutentries);
 	}
 	
-	public List<Fine> getFines(){
+	public LinkedList<Fine> getFines(){
 		return fines;
 	}
 	
