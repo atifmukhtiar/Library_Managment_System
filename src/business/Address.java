@@ -4,14 +4,15 @@ public class Address {
 	private String street;
 	private String city;
 	private String state;
-	private String zip;
+	private int zip;
 	
-	private Address(String street, String city, String state, String zip) {
+	public Address(String street, String city, String state, int zip) {
 		this.street = street;
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
 	}
+	
 	
 	
 	public String getStreet() {
@@ -32,10 +33,10 @@ public class Address {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public String getZip() {
+	public int getZip() {
 		return zip;
 	}
-	public void setZip(String zip) {
+	public void setZip(int zip) {
 		this.zip = zip;
 	}
 

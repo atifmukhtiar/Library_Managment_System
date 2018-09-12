@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="424.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Label fx:id="titleLabel" layoutX="179.0" layoutY="86.0" text="Login" />
+      <Button fx:id="submit" layoutX="160.0" layoutY="158.0" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="130.0" text="Submit" />
+   </children>
+</AnchorPane>
