@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.book.AddBookController">
+   <children>
+      <TextField fx:id="txtFieldISBN" layoutX="97.0" layoutY="110.0" promptText="ISBN" />
+      <TextField fx:id="txtFieldTitle" layoutX="96.0" layoutY="150.0" promptText="Title" />
+      <TextField fx:id="txtFieldCheckoutLength" layoutX="385.0" layoutY="110.0" promptText="Checkout Length" />
+      <TextField fx:id="txtFieldNumCopies" layoutX="385.0" layoutY="150.0" promptText="No. of Copies" />
+      <Label layoutX="265.0" layoutY="34.0" text="Add  Book" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+     
+       <TextField fx:id="txtFieldAuthorFName" layoutX="96.0" layoutY="264.0" promptText="First Name" />
+      <TextField fx:id="txtFieldAuthorLName" layoutX="96.0" layoutY="301.0" promptText="Last Name" />
+      <Label layoutX="268.0" layoutY="215.0" prefHeight="17.0" prefWidth="64.0" text="Author Info" />
+      <TextField fx:id="txtFieldAuthorPNum" layoutX="96.0" layoutY="341.0" promptText="Phone Number" />
+      <TextField fx:id="txtFieldAuthorSBio" layoutX="96.0" layoutY="376.0" promptText="Short Bio" />
+      <TextField fx:id="txtFieldAuthorStreet" layoutX="385.0" layoutY="264.0" promptText="Street" />
+      <TextField fx:id="txtFieldAuthorCity" layoutX="385.0" layoutY="301.0" promptText="City" />
+      <TextField fx:id="txtFieldAuthorState" layoutX="385.0" layoutY="341.0" promptText="State" />
+      <TextField fx:id="txtFieldAuthorZip" layoutX="385.0" layoutY="376.0" promptText="Zip" />
+      <Button fx:id="btnSubmit" layoutX="214.0" layoutY="533.0" mnemonicParsing="false" onAction="#btnSubmit" prefHeight="25.0" prefWidth="132.0" text="Submit" />
+   </children>
+</AnchorPane>

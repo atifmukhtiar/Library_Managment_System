@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="349.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AddBookController">
+   <children>
+      <TextField fx:id="txtFieldISBN" layoutX="96.0" layoutY="70.0" promptText="ISBN" />
+      <TextField fx:id="txtFieldTitle" layoutX="96.0" layoutY="110.0" promptText="Title" />
+      <TextField fx:id="txtFieldAuthor" layoutX="96.0" layoutY="152.0" promptText="Author" />
+      <TextField fx:id="txtFieldCheckoutLength" layoutX="96.0" layoutY="193.0" promptText="Checkout Length" />
+      <TextField fx:id="txtFieldNumCopies" layoutX="96.0" layoutY="234.0" promptText="No. of Copies" />
+      <Label layoutX="96.0" layoutY="26.0" text="Add  Book" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSubmit" layoutX="141.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnSubmit" text="Submit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.member.MemberController">
+   <children>
+      <Label layoutX="210.0" layoutY="28.0" text="Add Member" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+        <Label layoutX="332.0" layoutY="85.0" text="Address" />
+       <TextField fx:id="txtFieldFName" layoutX="65.0" layoutY="124.0" promptText="First Name" />
+      <TextField fx:id="txtFieldLName" layoutX="65.0" layoutY="163.0" promptText="Last Name" />
+      <TextField fx:id="txtFieldPNum" layoutX="65.0" layoutY="205.0" promptText="Phone Number" />
+      <TextField fx:id="txtFieldStreet" layoutX="332.0" layoutY="124.0" promptText="Street" />
+      <TextField fx:id="txtFieldCity" layoutX="332.0" layoutY="163.0" promptText="City" />
+      <TextField fx:id="txtFieldState" layoutX="332.0" layoutY="205.0" promptText="State" />
+      <TextField fx:id="txtFieldZip" layoutX="332.0" layoutY="247.0" promptText="Zip" />
+      
+      <Button fx:id="btnSubmit" layoutX="214.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnSubmit" prefHeight="25.0" prefWidth="132.0" text="Submit" />
+   </children>
+</AnchorPane>
