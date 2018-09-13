@@ -16,10 +16,14 @@ public class DataStorage{
 	public void saveObject(String fileName,Object object) {
 		 try
 	        {    
-	            FileOutputStream file = new FileOutputStream(prePath+fileName); 
+	            FileOutputStream file = new FileOutputStream(prePath+fileName,true); 
+	            
 	            ObjectOutputStream out = new ObjectOutputStream(file); 
 	       
 	            out.writeObject(object); 
+	            out.write('\n');
+	        
+	            
 	              
 	            out.close(); 
 	            file.close(); 

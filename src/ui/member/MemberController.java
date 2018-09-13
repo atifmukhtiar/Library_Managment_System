@@ -4,6 +4,7 @@ import java.util.List;
 
 import business.Address;
 import business.Member;
+import business.User;
 import dataaccess.DataStorage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,6 +55,19 @@ public class MemberController {
 		Member member =(Member) memSerialization.getObject("member.txt");
 		member.toStringMember();
 		
+	
+	}
+	
+	public void junk() {
+		/*User user =new User();
+		user.setId("AL-01");
+		user.setFirstName(txtFieldFName.getText());
+		user.setLastName(txtFieldLName.getText());
+		user.setPhoneNumber(txtFieldPNum.getText());
+		user.setAddress(address);
+		memSerialization.saveObject("user.txt",user);
+		User userFile =(User) memSerialization.getObject("user.txt");
+		userFile.toStringMember();*/
 		/*List<Object> listMember= memSerialization.getObjectList("member.txt");
 		
 		for(int n=0;n<listMember.size();n++) {
