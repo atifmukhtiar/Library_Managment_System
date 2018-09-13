@@ -1,5 +1,7 @@
 package ui.member;
 
+import java.util.List;
+
 import business.Address;
 import business.Member;
 import dataaccess.DataStorage;
@@ -48,8 +50,15 @@ public class MemberController {
 		member.setAddress(address);
 		
 		
-		memSerialization.saveMember(member);
-		memSerialization.getMember();
+		memSerialization.saveObject("member.txt",member);
+		Member member =(Member) memSerialization.getObject("member.txt");
+		member.toStringMember();
 		
+		/*List<Object> listMember= memSerialization.getObjectList("member.txt");
+		
+		for(int n=0;n<listMember.size();n++) {
+			Member m = (Member) listMember.get(n);	
+			m.toStringMember();
+		}*/
 	}
 }

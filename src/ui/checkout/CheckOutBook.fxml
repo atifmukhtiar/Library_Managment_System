@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.checkout.CheckoutController.fxml">
+   <children>
+      <Label layoutX="85.0" layoutY="34.0" text="Check Out Book">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="memberID" layoutX="94.0" layoutY="78.0" promptText="Member ID" />
+      <TextField fx:id="txtFieldISBN" layoutX="94.0" layoutY="123.0" promptText="ISBN" />
+      <Button fx:id="btnCheckout" layoutX="122.0" layoutY="178.0" mnemonicParsing="false" onAction="#checkoutSubmit" text="Checkout" />
+   </children>
+</AnchorPane>

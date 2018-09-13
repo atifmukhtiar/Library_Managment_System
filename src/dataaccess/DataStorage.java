@@ -5,15 +5,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class DataStorage{
 
 
+	String prePath = "src/dataaccess/storage/";
 	public void saveObject(String fileName,Object object) {
 		 try
 	        {    
-	            FileOutputStream file = new FileOutputStream(fileName); 
+	            FileOutputStream file = new FileOutputStream(prePath+fileName); 
 	            ObjectOutputStream out = new ObjectOutputStream(file); 
 	       
 	            out.writeObject(object); 
@@ -21,8 +24,7 @@ public class DataStorage{
 	            out.close(); 
 	            file.close(); 
 	              
-	            System.out.println("Object has been serialized"); 
-	  
+	           
 	        } 
 	          
 	        catch(IOException ex) { 
@@ -30,18 +32,54 @@ public class DataStorage{
 	        } 
 	}// end of saveMember
 	
-	public Object getObject(String fileName) {
+	
+	public List<Object> getObjectList(String fileName) {
 		 Object object=null;
+		 List<Object> listObject = new ArrayList<>();
 		
 		 try
 	        {    
 	       
-	            FileInputStream file = new FileInputStream(fileName); 
+	            FileInputStream file = new FileInputStream(prePath+fileName); 
 	            ObjectInputStream in = new ObjectInputStream(file); 
 	      
 	        
 	            object = in.readObject(); 
+	            
+	            while ((object = in.readObject()) != null) {
+	            	listObject.add(object);
+	            }
 	              
+	            in.close(); 
+	            file.close(); 
+	              
+	        } 
+	          
+	        catch(IOException ex) 
+	        { 
+	            System.out.println("IOException is caught"); 
+	        } 
+	          
+	        catch(ClassNotFoundException ex) 
+	        { 
+	            System.out.println("ClassNotFoundException is caught"); 
+	        } 
+		 
+		 return listObject;
+		 
+	
+	}
+	
+	public Object getObject(String fileName) {
+		 Object object=null;
+
+		 try
+	        {    	       
+	            FileInputStream file = new FileInputStream(prePath+fileName); 
+	            ObjectInputStream in = new ObjectInputStream(file); 
+	      
+	            object = in.readObject(); 
+	                    
 	            in.close(); 
 	            file.close(); 
 	              
